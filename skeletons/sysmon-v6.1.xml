@@ -1,0 +1,63 @@
+<Sysmon schemaversion="3.4">
+  <!-- Capture All Hashes -->
+  <HashAlgorithms>*</HashAlgorithms>
+  <EventFiltering>
+
+      <!-- EventID: 1 -->
+      <!-- Log all process creation -->
+      <ProcessCreate onmatch="exclude"/>
+
+      <!-- EventID: 2 -->
+      <!-- Log all file creation time stamps -->
+      <FileCreateTime onmatch="exclude"/>
+
+      <!-- EventID: 3 -->
+      <!-- Log all network connections -->
+      <NetworkConnect onmatch="exclude"/>
+
+      <!-- EventID: 5 -->
+      <!-- Log all process termination -->
+      <ProcessTerminate onmatch="exclude" />
+
+      <!-- EventID: 6 -->
+      <!-- Log all Drivers Loaded -->
+      <DriverLoad onmatch="exclude" />
+
+      <!-- EventID: 7 -->
+      <!-- Log all image loaded-->
+      <ImageLoad onmatch="exclude" />
+
+      <!-- EventID: 8 -->
+      <!-- Log all RemoteThread created -->
+      <CreateRemoteThread onmatch="exclude" />
+
+      <!-- EventID: 9 -->
+      <!-- Log all -->
+      <RawAccessRead onmatch="exclude" />
+
+      <!-- EventID: 10 -->
+      <!-- Log all -->
+      <ProcessAccess onmatch="exclude" />
+
+      <!-- EventID: 11 -->
+      <!-- Log all -->
+      <FileCreate onmatch="exclude" />
+
+      <!-- EventID: 12/13/14 -->
+      <!-- Log all registry operations -->
+      <RegistryEvent onmatch="exclude" />
+
+      <!-- EventID: 15 -->
+      <!-- Log all -->
+      <FileCreateStreamHash onmatch="exclude" />
+
+      <!-- EventID: 17/18 -->
+      <!-- Log all -->
+      <PipeEvent onmatch="exclude" />
+
+      <!-- EventID: 19/20/21 -->
+      <!-- Log all -->
+      <WmiEvent onmatch="exclude" />
+
+  </EventFiltering>
+</Sysmon>
