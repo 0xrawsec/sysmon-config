@@ -28,10 +28,12 @@
       <!-- There is way too much image loaded by Sysmon.exe in this version -->
       <!-- Mostly due to the new feature of File Information -->
       <!-- This Schema needs to be adapted with the name of the service -->
-      <ImageLoad onmatch="exclude">
-        <Image condition="is">C:\Windows\Sysmon.exe</Image>
-        <Image condition="is">C:\Windows\Sysmon64.exe</Image>
-      </ImageLoad>
+      <RuleGroup groupRelation="or">
+        <ImageLoad onmatch="exclude">
+          <Image condition="is">C:\Windows\Sysmon.exe</Image>
+          <Image condition="is">C:\Windows\Sysmon64.exe</Image>
+        </ImageLoad>
+      </RuleGroup>
 
 
       <!-- EventID: 8 -->
