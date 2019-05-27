@@ -46,7 +46,9 @@
 
       <!-- EventID: 10 -->
       <!-- Log all -->
-      <ProcessAccess onmatch="exclude" />
+      <ProcessAccess onmatch="exclude">
+          <SourceImage condition="is">C:\Windows\System32\VBoxService.exe</SourceImage>
+      </ProcessAccess>
 
       <!-- EventID: 11 -->
       <!-- Log all -->
